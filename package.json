@@ -24,5 +24,9 @@
 	"homepage": "https://github.com/NeserCode/NeserCode.github.io#readme",
 	"devDependencies": {
 		"vuepress": "^1.9.7"
+	},
+	"dependencies": {
+		"@vuepress/plugin-theme-data": "^2.0.0-alpha.25",
+		"@vuepress/utils": "^2.0.0-alpha.1"
 	}
 }

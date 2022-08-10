@@ -1,3 +1,9 @@
-# Hello.md
+---
+title: Hello
+home: true
+search: true
+---
 
-**Hello, world!**
+# Hello
+
+Hello World!

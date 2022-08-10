@@ -1,0 +1,28 @@
+{
+	"name": "nesercode.github.io",
+	"version": "1.0.0",
+	"description": "A blog bases vuepress",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vuepress dev docs",
+		"build": "vuepress build docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NeserCode/NeserCode.github.io.git"
+	},
+	"keywords": [
+		"blog",
+		"vuepress",
+		"vuepress-blog"
+	],
+	"author": "NeserCode",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/NeserCode/NeserCode.github.io/issues"
+	},
+	"homepage": "https://github.com/NeserCode/NeserCode.github.io#readme",
+	"devDependencies": {
+		"vuepress": "^1.9.7"
+	}
+}

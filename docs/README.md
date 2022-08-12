@@ -1,5 +1,6 @@
 ---
 title: wdnmd
+home: true
 ---
 
 # 一级标题

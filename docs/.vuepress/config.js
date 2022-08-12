@@ -1,6 +1,7 @@
 module.exports = {
     title: "文章标题",
     description: '文章描述',
+    theme: 'NeserCode',
 
     // 主题配置
     themeConfig: {
@@ -28,9 +29,9 @@ module.exports = {
 
         // 页脚信息
         footer: {
+            display: true,
             createYear: 2019, // 博客创建年份
-            copyrightInfo:
-                'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+            copyrightInfo: '✨NeserCode | <a target="_blank" href="https://github.com/NeserCode">Github</a>', // 博客版权信息，支持a标签
         }
     },
 

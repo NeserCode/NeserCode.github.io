@@ -36,9 +36,7 @@
 
     <Content class="theme-default-content custom" />
 
-    <div v-if="data.footer" class="footer">
-      {{ data.footer }}
-    </div>
+    <NeserFooter v-if="data.footer" />
 
     <Content v-else slot-key="footer" class="footer" />
   </main>
@@ -46,11 +44,12 @@
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
+import NeserFooter from "@theme/components/NeserFooter.vue";
 
 export default {
   name: "Home",
 
-  components: { NavLink },
+  components: { NavLink, NeserFooter },
 
   computed: {
     data() {

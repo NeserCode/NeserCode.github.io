@@ -1,6 +1,7 @@
 ---
 title: another wdnmd
 home: false
+footer: true
 ---
 
 # Another

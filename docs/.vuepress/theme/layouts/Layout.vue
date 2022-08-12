@@ -38,6 +38,8 @@ import Page from "@theme/components/Page.vue";
 import Sidebar from "@theme/components/Sidebar.vue";
 import { resolveSidebarItems } from "../util";
 
+import "@theme/styles/tailwind.css";
+
 export default {
   name: "Layout",
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="neser-footer">
+  <footer class="neser-footer">
     <div class="neser-copyright-info">
       <span
         v-if="themeConfig.footer.display && themeConfig.footer.createYear"
@@ -13,7 +13,7 @@
         {{ frontmatter.footer ?? "Power by VuePress and Theme by NeserCode" }}
       </span>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -35,3 +35,9 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss">
+.neser-footer {
+  @apply w-full h-full;
+}
+</style>

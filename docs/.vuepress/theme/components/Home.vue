@@ -36,9 +36,7 @@
 
     <Content class="theme-default-content custom" />
 
-    <NeserFooter v-if="data.footer" />
-
-    <Content v-else slot-key="footer" class="footer" />
+    <NeserFooter />
   </main>
 </template>
 

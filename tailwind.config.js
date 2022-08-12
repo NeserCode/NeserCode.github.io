@@ -1,8 +1,8 @@
 module.exports = {
   purge: [
-    './docs/**/*.html',
-    './docs/**/*.js',
-    './docs/**/*.vue',
+    './docs/.vuepress/theme/**/*.html',
+    './docs/.vuepress/theme/**/*.js',
+    './docs/.vuepress/theme/**/*.vue',
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {

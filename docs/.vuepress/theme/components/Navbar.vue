@@ -97,6 +97,23 @@ export default {
     handleLinksWrapWidth();
     window.addEventListener("resize", handleLinksWrapWidth, false);
   },
+
+  methods: {
+    toggleDarkMode: function (optionalChoice) {
+      let hSelector = document.querySelector("html");
+
+      if (optionalChoice !== undefined) {
+        if (optionalChoice) {
+          hSelector.classList.add("dark");
+          localStorage.setItem();
+        }
+      }
+    },
+    initDarkMode: function () {
+      if (localStorage.getItem("neser-dark-mode") === "light")
+        this.isLight = true;
+    },
+  },
 };
 
 function css(el, property) {

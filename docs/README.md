@@ -2,6 +2,7 @@
 title: wdnmd
 home: true
 footer: true
+features: [a b c d e]
 ---
 
 # 一级标题

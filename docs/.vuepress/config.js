@@ -12,7 +12,7 @@ module.exports = {
                 text: '页面',
                 link: '/guide/',
                 items: [
-                    { text: 'Another', link: '/guide/Another/' },
+                    { text: '前端学习路线', link: '/guide/Another/' },
                     { text: 'NotFound', link: '/pages/0a83b083bdf257cb/' },
                 ],
             },
@@ -31,7 +31,7 @@ module.exports = {
         footer: {
             display: true,
             createYear: 2019, // 博客创建年份
-            copyrightInfo: '✨NeserCode | <a target="_blank" href="https://github.com/NeserCode">Github</a>', // 博客版权信息，支持a标签
+            copyrightInfo: '✨NeserCode - <a target="_blank" href="https://github.com/NeserCode">Github</a>', // 博客版权信息，支持a标签
         }
     },
 
@@ -40,5 +40,12 @@ module.exports = {
         ['link', { rel: 'icon', href: 'https://tenapi.cn/qqimg/?qq=510648363' }], //favicons，资源放在public文件夹
         ['meta', { name: 'keywords', content: 'wdnmd' }],
         ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
-    ]
+    ],
+
+    postcss: {
+        plugins: [
+            require("autoprefixer"),
+            require("tailwindcss")("./tailwind.config.js")
+        ]
+    }
 }

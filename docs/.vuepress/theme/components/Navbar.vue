@@ -35,9 +35,9 @@
           $page.frontmatter.search !== false
         "
       />
-      <div class="NeserLightSwitch">
-        <span v-show="isLight">☀</span>
-        <span v-show="!isLight">🌙</span>
+      <div class="NeserLightSwitch" @click="toggleDarkMode()">
+        <span v-show="isDark">☀</span>
+        <span v-show="!isDark">🌙</span>
       </div>
       <NavLinks class="can-hide" />
     </div>
@@ -63,7 +63,7 @@ export default {
   data() {
     return {
       linksWrapMaxWidth: null,
-      isLight: true,
+      isDark: false,
     };
   },
 
@@ -77,6 +77,10 @@ export default {
     isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName;
     },
+  },
+
+  created() {
+    this.initDarkMode();
   },
 
   mounted() {
@@ -105,13 +109,23 @@ export default {
       if (optionalChoice !== undefined) {
         if (optionalChoice) {
           hSelector.classList.add("dark");
-          localStorage.setItem();
+          localStorage.setItem("neser-dark-mode", "dark");
+        } else {
+          hSelector.classList.remove("dark");
+          localStorage.setItem("neser-dark-mode", "light");
         }
+      } else {
+        this.isDark = !this.isDark;
+        this.toggleDarkMode(this.isDark);
       }
+      console.log(optionalChoice);
     },
     initDarkMode: function () {
       if (localStorage.getItem("neser-dark-mode") === "light")
-        this.isLight = true;
+        this.isDark = false;
+      else this.isDark = true;
+
+      this.toggleDarkMode(this.isDark);
     },
   },
 };

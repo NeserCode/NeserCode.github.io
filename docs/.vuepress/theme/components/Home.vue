@@ -3,7 +3,7 @@
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
-    <header class="hero">
+    <!-- <header class="hero">
       <img
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
@@ -21,7 +21,7 @@
       <p v-if="data.actionText && data.actionLink" class="action">
         <NavLink class="action-button" :item="actionLink" />
       </p>
-    </header>
+    </header> -->
 
     <div v-if="data.features && data.features.length" class="features">
       <div
@@ -64,7 +64,15 @@ export default {
 };
 </script>
 
+<style lang="postcss" scoped>
+.home {
+  @apply min-h-screen bg-gray-50 dark:bg-gray-700;
+}
 
+:deep(.home .theme-default-content h1) {
+  @apply text-3xl;
+}
+</style>
 
 <style lang="stylus">
 .home {

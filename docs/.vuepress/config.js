@@ -1,6 +1,6 @@
 module.exports = {
-    title: "文章标题",
-    description: '文章描述',
+    title: "✨NeserCode",
+    description: 'Code more, grow more',
     theme: 'NeserCode',
 
     // 主题配置

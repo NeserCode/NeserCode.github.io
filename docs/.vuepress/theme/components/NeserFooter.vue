@@ -44,7 +44,7 @@ export default {
 }
 
 .neser-footer .neser-copyright-info {
-  @apply max-w-max h-full py-2 my-1 mx-auto
+  @apply max-w-max h-full p-2 my-1 mx-auto
   border-t border-gray-400;
 }
 .neser-footer .neser-copyright-info .neser-copyright-year {

@@ -5,7 +5,7 @@
     <RouterLink :to="$localePath" class="home-link">
       <img
         v-if="$site.themeConfig.logo"
-        class="logo"
+        :class="['logo']"
         :src="$withBase($site.themeConfig.logo)"
         :alt="$siteTitle"
       />
@@ -208,6 +208,10 @@ $navbar-horizontal-padding = 1.5rem;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+    }
+
+    .NeserLightSwitch {
+      margin-left: 1.5rem;
     }
   }
 }

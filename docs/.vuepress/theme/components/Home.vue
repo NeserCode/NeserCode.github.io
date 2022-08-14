@@ -66,11 +66,50 @@ export default {
 
 <style lang="postcss" scoped>
 .home {
-  @apply min-h-screen bg-gray-50 dark:bg-gray-700;
+  @apply bg-white dark:bg-gray-700;
 }
 
-:deep(.home .theme-default-content h1) {
+/* Markdown Style */
+/* HeaderLines */
+:deep(.theme-default-content.custom > h1) {
   @apply text-3xl;
+}
+:deep(.theme-default-content.custom > h2) {
+  @apply text-2xl;
+}
+:deep(.theme-default-content.custom > h3) {
+  @apply text-xl;
+}
+:deep(.theme-default-content.custom > h4),
+:deep(.theme-default-content.custom > h5),
+:deep(.theme-default-content.custom > h6) {
+  @apply text-lg;
+}
+
+/* Anchor */
+:deep(.theme-default-content.custom > a.header-anchor) {
+  @apply inline-flex justify-center items-center min-w-max;
+}
+:deep(.theme-default-content.custom > h1),
+:deep(.theme-default-content.custom > h1 a.header-anchor) {
+  @apply transition-all transform;
+}
+:deep(.theme-default-content.custom > h1) {
+  @apply -translate-x-0;
+}
+:deep(.theme-default-content.custom > h1:hover) {
+  @apply translate-x-0;
+}
+:deep(.theme-default-content.custom > h1 a.header-anchor) {
+  @apply w-0 opacity-0;
+}
+:deep(.theme-default-content.custom > h1:hover a.header-anchor) {
+  @apply opacity-100 translate-x-0;
+}
+
+/* Paragraphs */
+:deep(.theme-default-content.custom > p) {
+  @apply text-lg my-2;
 }
 </style>
 
@@ -124,7 +163,6 @@ export default {
   }
 
   .features {
-    border-top: 1px solid $borderColor;
     padding: 1.2rem 0;
     margin-top: 2.5rem;
     display: flex;

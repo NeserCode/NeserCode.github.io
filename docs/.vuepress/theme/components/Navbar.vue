@@ -118,7 +118,6 @@ export default {
         this.isDark = !this.isDark;
         this.toggleDarkMode(this.isDark);
       }
-      console.log(optionalChoice);
     },
     initDarkMode: function () {
       if (localStorage.getItem("neser-dark-mode") === "light")

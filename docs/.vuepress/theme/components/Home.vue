@@ -71,6 +71,15 @@ export default {
 
 /* Markdown Style */
 /* HeaderLines */
+:deep(.theme-default-content.custom > h1),
+:deep(.theme-default-content.custom > h2),
+:deep(.theme-default-content.custom > h3),
+:deep(.theme-default-content.custom > h4),
+:deep(.theme-default-content.custom > h5),
+:deep(.theme-default-content.custom > h6) {
+  @apply inline-flex justify-center items-center;
+}
+
 :deep(.theme-default-content.custom > h1) {
   @apply text-3xl;
 }
@@ -88,23 +97,27 @@ export default {
 
 /* Anchor */
 :deep(.theme-default-content.custom > a.header-anchor) {
-  @apply inline-flex justify-center items-center min-w-max;
+  @apply inline-flex justify-center items-center min-w-max px-1;
 }
 :deep(.theme-default-content.custom > h1),
 :deep(.theme-default-content.custom > h1 a.header-anchor) {
   @apply transition-all transform;
 }
-:deep(.theme-default-content.custom > h1) {
-  @apply -translate-x-0;
+:deep(.theme-default-content.custom > h1 a.header-anchor),
+:deep(.theme-default-content.custom > h2 a.header-anchor),
+:deep(.theme-default-content.custom > h3 a.header-anchor),
+:deep(.theme-default-content.custom > h4 a.header-anchor),
+:deep(.theme-default-content.custom > h5 a.header-anchor),
+:deep(.theme-default-content.custom > h6 a.header-anchor) {
+  @apply hidden opacity-0;
 }
-:deep(.theme-default-content.custom > h1:hover) {
-  @apply translate-x-0;
-}
-:deep(.theme-default-content.custom > h1 a.header-anchor) {
-  @apply w-0 opacity-0;
-}
-:deep(.theme-default-content.custom > h1:hover a.header-anchor) {
-  @apply opacity-100 translate-x-0;
+:deep(.theme-default-content.custom > h1:hover a.header-anchor),
+:deep(.theme-default-content.custom > h2:hover a.header-anchor),
+:deep(.theme-default-content.custom > h3:hover a.header-anchor),
+:deep(.theme-default-content.custom > h4:hover a.header-anchor),
+:deep(.theme-default-content.custom > h5:hover a.header-anchor),
+:deep(.theme-default-content.custom > h6:hover a.header-anchor) {
+  @apply inline-flex opacity-100;
 }
 
 /* Paragraphs */

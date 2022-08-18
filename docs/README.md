@@ -2,7 +2,13 @@
 title: wdnmd
 home: true
 footer: true
-features: [a b c d e]
+features:
+  - title: a
+    details: a value
+  - title: b
+    details: b value
+  - title: c
+    details: c value
 ---
 
 # 一级标题

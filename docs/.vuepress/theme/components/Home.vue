@@ -35,7 +35,10 @@
     </div>
 
     <Content class="theme-default-content custom" />
-
+    <img
+      src="https://ghchart.rshah.org/NeserCode"
+      alt="NeserCode's Github chart"
+    />
     <NeserFooter />
   </main>
 </template>

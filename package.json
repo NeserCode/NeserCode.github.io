@@ -29,6 +29,7 @@
 		"postcss": "^7.0.39",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
 		"vuepress": "^1.9.7",
+		"vuepress-plugin-git-log": "^1.0.1",
 		"vuepress-plugin-smooth-scroll": "^0.0.10"
 	},
 	"dependencies": {

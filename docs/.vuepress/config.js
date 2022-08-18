@@ -1,4 +1,3 @@
-const { gitPlugin } = require('@vuepress/plugin-git')
 const moment = require('moment')
 
 module.exports = {
@@ -73,11 +72,12 @@ module.exports = {
                 headerAnchorSelector: '.header-anchor'
             }
         ],
-        gitPlugin({
-            additionalArgs: '--no-merge',
-            onlyFirstAndLastCommit: true,
-        }),
-        ['vuepress-plugin-smooth-scroll']
+        [
+            '@vuepress/plugin-git'
+        ],
+        [
+            'smooth-scroll'
+        ]
 
     ]
 }

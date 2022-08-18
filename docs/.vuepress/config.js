@@ -3,6 +3,12 @@ module.exports = {
     description: 'Code more, grow more',
     theme: 'NeserCode',
 
+    // 本地设置
+    locales: {
+        '/': {
+            lang: 'zh-CN'
+        }
+    },
     // 主题配置
     themeConfig: {
         // 导航配置
@@ -46,7 +52,21 @@ module.exports = {
     postcss: {
         plugins: [
             require("autoprefixer"),
-            require("tailwindcss")("./tailwind.config.js")
+            require("tailwindcss")("./tailwind.config.js"),
         ]
-    }
+    },
+
+    plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 moment
+                    const moment = require('moment')
+                    moment.locale(lang)
+                    return moment(timestamp).fromNow()
+                }
+            }
+        ]
+    ]
 }

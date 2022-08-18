@@ -33,7 +33,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.siteInfo);
+    console.log(this);
   },
 };
 </script>

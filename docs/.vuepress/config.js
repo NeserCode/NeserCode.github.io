@@ -1,3 +1,6 @@
+const { gitPlugin } = require('@vuepress/plugin-git')
+const moment = require('moment')
+
 module.exports = {
     title: "✨NeserCode",
     description: 'Code more, grow more',
@@ -32,14 +35,13 @@ module.exports = {
         docsDir: 'docs', // 编辑的文件夹
         editLinks: true, // 启用编辑
         editLinkText: '编辑',
-        sidebar: true,
 
         // 页脚信息
         footer: {
             display: true,
             createYear: 2019, // 博客创建年份
             copyrightInfo: '✨NeserCode - <a target="_blank" href="https://github.com/NeserCode">Github</a>', // 博客版权信息，支持a标签
-        }
+        },
     },
 
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
@@ -58,15 +60,24 @@ module.exports = {
 
     plugins: [
         [
-            '@vuepress/last-updated',
-            {
+            '@vuepress/last-updated', {
                 transformer: (timestamp, lang) => {
-                    // 不要忘了安装 moment
-                    const moment = require('moment')
                     moment.locale(lang)
                     return moment(timestamp).fromNow()
                 }
             }
-        ]
+        ],
+        [
+            '@vuepress/active-header-links', {
+                sidebarLinkSelector: '.sidebar-link',
+                headerAnchorSelector: '.header-anchor'
+            }
+        ],
+        gitPlugin({
+            additionalArgs: '--no-merge',
+            onlyFirstAndLastCommit: true,
+        }),
+        ['vuepress-plugin-smooth-scroll']
+
     ]
 }

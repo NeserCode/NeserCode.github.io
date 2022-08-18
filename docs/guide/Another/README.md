@@ -1,13 +1,11 @@
 ---
 title: 前端学习路线
 home: false
-footer: true
-sidebar: true
 ---
 
 # 前端学习路线
 
-[TOC]
+[[TOC]]
 
 ## 概述
 

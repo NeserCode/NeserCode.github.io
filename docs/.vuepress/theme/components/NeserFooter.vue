@@ -33,7 +33,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this);
+    console.log(this.$page, this.$site);
   },
 };
 </script>

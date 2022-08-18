@@ -1,7 +1,6 @@
 ---
 title: wdnmd
 home: true
-footer: true
 features:
   - title: a
     details: a value

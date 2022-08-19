@@ -16,7 +16,8 @@ const isProd = process.env.NODE_ENV === 'production'
 export default defineUserConfig({
     base: '/',
     title: '✨NeserCode',
-    description:'Welcome to my blog',
+    description: 'Welcome to my blog',
+    // html head config
     head: [
         [
             'link',
@@ -28,15 +29,29 @@ export default defineUserConfig({
         ],
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
-
+    // bundler config
     bundler:
         // specify bundler via environment variable
         process.env.DOCS_BUNDLER === 'webpack' ? webpackBundler() : viteBundler(),
-
+    // nesercode theme config
     theme: defaultTheme({
         logo: 'https://tenapi.cn/qqimg/?qq=510648363',
         repo: 'NeserCode/NeserCode.github.io',
         docsDir: 'docs',
+        lastUpdatedText:'更新于',
+
+        // locales config
+        locales: {
+            
+            '/': {
+                // navbar config
+                navbar: [{
+                    text: 'Markdown',
+                    link: '/mds/guide/markdown.md',
+                    activeMatch:'/mds/guide/'
+                }]
+            }
+        },
 
         themePlugins: {
             // only enable git plugin in production mode
@@ -45,7 +60,7 @@ export default defineUserConfig({
             prismjs: !isProd,
         },
     }),
-
+    // plugins config
     plugins: [
         registerComponentsPlugin({
             componentsDir: path.resolve(__dirname, './components'),
@@ -60,7 +75,7 @@ export default defineUserConfig({
         tocPlugin(),
         gitPlugin()
     ],
-
+    // locales config
     locales: {
         '/': {
             lang:'zh-CN'

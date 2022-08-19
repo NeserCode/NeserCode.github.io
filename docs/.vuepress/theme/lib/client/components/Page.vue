@@ -21,12 +21,12 @@
 import PageMeta from "@theme/PageMeta.vue";
 import PageNav from "@theme/PageNav.vue";
 
-import { usePageData, usePagesData, useSiteData } from "@vuepress/client";
+// import { usePageData, usePagesData, useSiteData } from "@vuepress/client";
 
-const pageData = usePageData();
-const pagesData = usePagesData();
-const siteData = useSiteData();
+// const pageData = usePageData();
+// const pagesData = usePagesData();
+// const siteData = useSiteData();
 
-console.log(pageData.value);
+// console.log(pageData.value);
 </script>
 

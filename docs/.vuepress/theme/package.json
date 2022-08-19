@@ -1,0 +1,60 @@
+{
+	"name": "vuepress-theme-nesercode",
+	"version": "1.0.0",
+	"description": "a theme for vuepress by NeserCode",
+	"main": "lib/node/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NeserCode/vuepress-theme-nesercode.git"
+	},
+	"keywords": [
+		"blog"
+	],
+	"author": "NeserCode",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/NeserCode/vuepress-theme-nesercode/issues"
+	},
+	"homepage": "https://github.com/NeserCode/vuepress-theme-nesercode#readme",
+	"devDependencies": {
+		"vuepress": "^2.0.0-beta.49"
+	},
+	"files": [
+		"lib",
+		"templates"
+	],
+	"dependencies": {
+		"@vuepress/client": "2.0.0-beta.49",
+		"@vuepress/core": "2.0.0-beta.49",
+		"@vuepress/plugin-active-header-links": "2.0.0-beta.49",
+		"@vuepress/plugin-back-to-top": "2.0.0-beta.49",
+		"@vuepress/plugin-container": "2.0.0-beta.49",
+		"@vuepress/plugin-external-link-icon": "2.0.0-beta.49",
+		"@vuepress/plugin-git": "2.0.0-beta.49",
+		"@vuepress/plugin-medium-zoom": "2.0.0-beta.49",
+		"@vuepress/plugin-nprogress": "2.0.0-beta.49",
+		"@vuepress/plugin-palette": "2.0.0-beta.49",
+		"@vuepress/plugin-prismjs": "2.0.0-beta.49",
+		"@vuepress/plugin-theme-data": "2.0.0-beta.49",
+		"@vuepress/shared": "2.0.0-beta.49",
+		"@vuepress/utils": "2.0.0-beta.49",
+		"@vueuse/core": "^8.7.5",
+		"sass": "^1.53.0",
+		"vue": "^3.2.37",
+		"vue-router": "^4.1.2"
+	},
+	"peerDependencies": {
+		"sass-loader": "^13.0.0"
+	},
+	"peerDependenciesMeta": {
+		"sass-loader": {
+			"optional": true
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

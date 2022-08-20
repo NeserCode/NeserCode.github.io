@@ -3,6 +3,7 @@ import NavbarBrand from '@theme/NavbarBrand.vue'
 import NavbarItems from '@theme/NavbarItems.vue'
 import ToggleColorModeButton from '@theme/ToggleColorModeButton.vue'
 import ToggleSidebarButton from '@theme/ToggleSidebarButton.vue'
+
 import { computed, onMounted, ref } from 'vue'
 import { useThemeLocaleData } from '../composables'
 
@@ -73,3 +74,9 @@ function getCssValue(el: HTMLElement | null, property: string): number {
     </div>
   </header>
 </template>
+
+<style lang="postcss">
+.navbar {
+  @apply bg-white dark:bg-gray-800 bg-opacity-90 backdrop-blur;
+}
+</style>

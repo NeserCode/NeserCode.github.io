@@ -11,6 +11,8 @@ import { activeHeaderLinksPlugin } from "@vuepress/plugin-active-header-links"
 import { tocPlugin } from "@vuepress/plugin-toc"
 import { gitPlugin } from "@vuepress/plugin-git"
 
+import { copyCodePlugin } from "vuepress-plugin-copy-code2"
+
 const isProd = process.env.NODE_ENV === "production"
 
 export default defineUserConfig({
@@ -89,6 +91,16 @@ export default defineUserConfig({
 		}),
 		tocPlugin(),
 		gitPlugin(),
+
+		copyCodePlugin({
+			showInMobile: true,
+			locales: {
+				"/": {
+					hint: "复制这份代码",
+					copy: "已复制 ",
+				},
+			},
+		}),
 	],
 	// locales config
 	locales: {

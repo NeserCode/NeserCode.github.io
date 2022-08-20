@@ -17,3 +17,7 @@
 @use 'transitions';
 
 @use '@vuepress/plugin-palette/style';
+
+html{
+    scroll-behavior: smooth;
+}

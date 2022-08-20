@@ -240,4 +240,13 @@ export interface DefaultThemeLocaleData extends LocaleData {
      * A11y text for sidebar toggle button
      */
     toggleSidebar?: string;
+    /**
+     * footer config
+     */
+    footer?: {
+        display: Boolean,
+        copyright?: String,
+        year?: String,
+        displayThemeInfo?: Boolean
+    };
 }

@@ -1,4 +1,5 @@
 "use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultTheme = void 0;
 const plugin_active_header_links_1 = require("@vuepress/plugin-active-header-links");
@@ -16,7 +17,7 @@ const utils_2 = require("./utils");
 const defaultTheme = ({ themePlugins = {}, ...localeOptions } = {}) => {
     (0, utils_2.assignDefaultLocaleOptions)(localeOptions);
     return {
-        name: '@vuepress/theme-default',
+        name: 'vuepress-theme-nesercode',
         layouts: utils_1.path.resolve(__dirname, '../client/layouts'),
         templateBuild: utils_1.path.resolve(__dirname, '../../templates/build.html'),
         // use alias to make all components replaceable
@@ -24,9 +25,12 @@ const defaultTheme = ({ themePlugins = {}, ...localeOptions } = {}) => {
             .readdirSync(utils_1.path.resolve(__dirname, '../client/components'))
             .filter((file) => file.endsWith('.vue'))
             .map((file) => [
-            `@theme/${file}`,
-            utils_1.path.resolve(__dirname, '../client/components', file),
-        ])),
+                `@theme/${file}`,
+                utils_1.path.resolve(__dirname, '../client/components', file),
+            ])),
+        define: {
+            a: 1
+        },
         clientConfigFile: utils_1.path.resolve(__dirname, '../client/config.js'),
         extendsPage: (page) => {
             // save relative file path into page data to generate edit link

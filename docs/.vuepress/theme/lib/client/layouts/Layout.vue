@@ -133,3 +133,9 @@ const onBeforeLeave = scrollPromise.pending
     </slot>
   </div>
 </template>
+
+<style lang="postcss">
+html {
+  @apply scroll-smooth;
+}
+</style>

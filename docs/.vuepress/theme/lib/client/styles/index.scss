@@ -18,6 +18,7 @@
 
 @use '@vuepress/plugin-palette/style';
 
-html{
-    scroll-behavior: smooth;
-}
+/* Tailwind Css Import */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

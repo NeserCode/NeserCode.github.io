@@ -86,7 +86,7 @@ export default defineUserConfig({
 		isProd ? shikiPlugin({ theme: "dark-plus" }) : [],
 		searchPlugin(),
 		activeHeaderLinksPlugin({
-			delay: 0,
+			delay: 100,
 			offset: 5,
 		}),
 		tocPlugin(),

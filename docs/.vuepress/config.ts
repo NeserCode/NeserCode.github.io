@@ -12,6 +12,7 @@ import { tocPlugin } from "@vuepress/plugin-toc"
 import { gitPlugin } from "@vuepress/plugin-git"
 
 import { copyCodePlugin } from "vuepress-plugin-copy-code2"
+import { readingTimePlugin } from "vuepress-plugin-reading-time2"
 
 const isProd = process.env.NODE_ENV === "production"
 
@@ -101,6 +102,7 @@ export default defineUserConfig({
 				},
 			},
 		}),
+		readingTimePlugin({}),
 	],
 	// locales config
 	locales: {

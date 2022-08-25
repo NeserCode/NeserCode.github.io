@@ -334,18 +334,6 @@ module.exports = {
 
 <!-- TODO Support line numbers for specific fence block -->
 
-- 示例:
-
-<picture>
-  <source srcset="/line-numbers-desktop.png" media="(min-width: 719px)">
-  <img class="line-numbers-desktop-snap" alt="Image">
-</picture>
-
-<picture>
-  <source srcset="/line-numbers-mobile.gif" media="(max-width: 719px)">
-  <img class="line-numbers-mobile-snap" alt="Image">
-</picture>
-
 <style>
   @media screen and (min-width:  719px) {
     .line-numbers-mobile-snap {

@@ -13,6 +13,7 @@ import { gitPlugin } from "@vuepress/plugin-git"
 
 import { copyCodePlugin } from "vuepress-plugin-copy-code2"
 import { readingTimePlugin } from "vuepress-plugin-reading-time2"
+import { useThemePlugin } from "./theme/plugin/themePlugin-nesercode"
 
 const isProd = process.env.NODE_ENV === "production"
 
@@ -80,6 +81,16 @@ export default defineUserConfig({
 	}),
 	// plugins config
 	plugins: [
+		useThemePlugin({
+			footer: {
+				display: true,
+				year: "2021-2022",
+				copyright:
+					"NeserCode - <a target='_blank' href='https://github.com/NeserCode'>Github</a>",
+				themeInfoDisplay: true,
+			},
+		}),
+
 		registerComponentsPlugin({
 			componentsDir: path.resolve(__dirname, "./components"),
 		}),

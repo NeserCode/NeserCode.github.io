@@ -30,6 +30,9 @@ const NavbarBrandLogo: FunctionalComponent = () => {
     class: 'logo',
     src: withBase(navbarBrandLogo.value),
     alt: navbarBrandTitle.value,
+    style: {
+      display: 'inline-block'
+    }
   })
   if (themeLocale.value.logoDark === undefined) {
     return img

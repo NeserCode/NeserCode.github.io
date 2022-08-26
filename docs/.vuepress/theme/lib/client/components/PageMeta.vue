@@ -100,25 +100,38 @@ const contributors = useContributors()
     </div>
 
     <div v-if="lastUpdated" class="meta-item last-updated">
+      <span
+        v-if="contributors && contributors.length"
+        class="meta-item contributors"
+      >
+        <span class="meta-item-label"
+          >{{ themeLocale.contributorsText }}:
+        </span>
+        <span class="meta-item-info">
+          <template v-for="(contributor, index) in contributors" :key="index">
+            <span class="contributor" :title="`email: ${contributor.email}`">
+              {{ contributor.name }}
+            </span>
+            <template v-if="index !== contributors.length - 1">, </template>
+          </template>
+        </span>
+      </span>
       <span class="meta-item-label">{{ themeLocale.lastUpdatedText }}: </span>
       <ClientOnly>
         <span class="meta-item-info">{{ lastUpdated }}</span>
       </ClientOnly>
     </div>
-
-    <div
-      v-if="contributors && contributors.length"
-      class="meta-item contributors"
-    >
-      <span class="meta-item-label">{{ themeLocale.contributorsText }}: </span>
-      <span class="meta-item-info">
-        <template v-for="(contributor, index) in contributors" :key="index">
-          <span class="contributor" :title="`email: ${contributor.email}`">
-            {{ contributor.name }}
-          </span>
-          <template v-if="index !== contributors.length - 1">, </template>
-        </template>
-      </span>
-    </div>
   </footer>
 </template>
+
+<style lang="postcss" scoped>
+.page-meta {
+  @apply text-base;
+}
+.last-updated {
+  @apply h-full;
+}
+.contributors {
+  @apply inline-flex items-center px-1;
+}
+</style>

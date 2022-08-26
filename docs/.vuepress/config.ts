@@ -56,6 +56,7 @@ export default defineUserConfig({
 		repo: "NeserCode/NeserCode.github.io",
 		docsDir: "docs",
 		lastUpdatedText: "更新于",
+		contributorsText: "由",
 		editLink: false,
 
 		// locales config

@@ -14,12 +14,14 @@
 
     <PageNav />
     <slot name="bottom" />
+    <PageFooter />
   </main>
 </template>
 
 <script setup>
-import PageMeta from "@theme/PageMeta.vue";
-import PageNav from "@theme/PageNav.vue";
+import PageMeta from "./PageMeta.vue";
+import PageNav from "./PageNav.vue";
+import PageFooter from "./PageFooter.vue";
 
 // import { usePageData, usePagesData, useSiteData } from "@vuepress/client";
 

@@ -104,19 +104,17 @@ const contributors = useContributors()
         v-if="contributors && contributors.length"
         class="meta-item contributors"
       >
-        <span class="meta-item-label"
-          >{{ themeLocale.contributorsText }}:
-        </span>
+        <span class="meta-item-label">{{ themeLocale.contributorsText }} </span>
         <span class="meta-item-info">
           <template v-for="(contributor, index) in contributors" :key="index">
-            <span class="contributor" :title="`email: ${contributor.email}`">
+            <span class="contributor" :title="`email ${contributor.email}`">
               {{ contributor.name }}
             </span>
             <template v-if="index !== contributors.length - 1">, </template>
           </template>
         </span>
       </span>
-      <span class="meta-item-label">{{ themeLocale.lastUpdatedText }}: </span>
+      <span class="meta-item-label">{{ themeLocale.lastUpdatedText }} </span>
       <ClientOnly>
         <span class="meta-item-info">{{ lastUpdated }}</span>
       </ClientOnly>
@@ -125,13 +123,14 @@ const contributors = useContributors()
 </template>
 
 <style lang="postcss" scoped>
-.page-meta {
+.page-meta,
+.last-updated {
   @apply text-base;
 }
-.last-updated {
-  @apply h-full;
+.page-meta .meta-item {
+  @apply mt-0;
 }
 .contributors {
-  @apply inline-flex items-center px-1;
+  @apply inline-flex items-center px-1.5;
 }
 </style>

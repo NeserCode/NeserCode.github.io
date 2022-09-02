@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "A blog bases vuepress-theme-nesercode",
 	"main": "index.js",
-	"type": "module",
 	"scripts": {
 		"dev": "vuepress dev docs",
 		"build": "vuepress build docs"
@@ -33,7 +32,8 @@
 		"postcss": "^8.4.16",
 		"tailwindcss": "^3.1.8",
 		"vuepress": "^2.0.0-beta.49",
-		"vuepress-plugin-copy-code2": "^2.0.0-beta.91",
-		"vuepress-plugin-reading-time2": "^2.0.0-beta.91"
+		"vuepress-plugin-blog2": "^2.0.0-beta.49",
+		"vuepress-plugin-copy-code2": "^2.0.0-beta.49",
+		"vuepress-plugin-reading-time2": "^2.0.0-beta.49"
 	}
 }

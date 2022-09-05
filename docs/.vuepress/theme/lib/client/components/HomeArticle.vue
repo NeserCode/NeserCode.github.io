@@ -4,9 +4,9 @@
 
 <script setup lang="ts">
 // import { useSiteLocaleData } from '@vuepress/client'
-// import { useThemeData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeData } from '@vuepress/plugin-theme-data/lib/client'
 
-const site = siteData
+const site = useThemeData()
 console.log(site.value);
 
 </script>

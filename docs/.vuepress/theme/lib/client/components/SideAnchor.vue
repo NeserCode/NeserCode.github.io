@@ -48,6 +48,8 @@ function getAnchorList() {
     active: false,
   }));
   list.value = tempList;
+
+  freshAnchor();
 }
 
 function freshAnchor() {
@@ -76,17 +78,16 @@ function freshAnchor() {
 
 onMounted(() => {
   title.value = $page.value.title;
-  freshAnchor();
 
-  window.onload = getAnchorList;
-  window.onscroll = freshAnchor;
-
+  window.onload = getAnchorList();
   console.log($page.value, $headTitle.value);
 });
 watch(
   () => "$page.value.title",
   debounce(() => {
-    nextTick(getAnchorList);
+    nextTick(() => {
+      getAnchorList();
+    });
   }),
   {
     deep: true,

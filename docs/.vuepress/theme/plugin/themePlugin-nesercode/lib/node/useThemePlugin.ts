@@ -1,5 +1,5 @@
 import type { PluginObject, Page } from "@vuepress/core"
-import { themeData, generateThemeFooter } from "../share"
+import { themeData, generateThemeOptions } from "../share"
 
 export interface useThemePluginOptions {
 	footer?: {
@@ -8,6 +8,7 @@ export interface useThemePluginOptions {
 		year?: String
 		themeInfoDisplay?: Boolean
 	}
+	subSidebar?: { sidebarDepth?: Number } | Boolean
 }
 
 export const useThemePlugin = (
@@ -16,7 +17,7 @@ export const useThemePlugin = (
 	return {
 		name: `theme-plugin-nesercode`,
 		extendsPage: (page: Page<{ themeDataPlugin?: themeData }>): void => {
-			page.data.themeDataPlugin = generateThemeFooter(options)
+			page.data.themeDataPlugin = generateThemeOptions(options ?? null)
 		},
 	}
 }

@@ -2,7 +2,8 @@
   <main class="page">
     <slot name="top" />
     <!-- <Toc /> -->
-    <side-anchor />
+    <!-- <side-anchor /> -->
+    <sidebar-items />
     <div class="theme-default-content">
       <slot name="content-top" />
 
@@ -23,14 +24,7 @@
 import PageMeta from "./PageMeta.vue";
 import PageNav from "./PageNav.vue";
 import PageFooter from "./PageFooter.vue";
-import SideAnchor from "./SideAnchor.vue";
-
-// import { usePageData, usePagesData, useSiteData } from "@vuepress/client";
-
-// const pageData = usePageData();
-// const pagesData = usePagesData();
-// const siteData = useSiteData();
-
-// console.log(pageData.value);
+// import SideAnchor from "./SideAnchor.vue";
+import SidebarItems from "./SidebarItems.vue";
 </script>
 

@@ -93,6 +93,7 @@ export default defineUserConfig({
 					"NeserCode - <a target='_blank' href='https://github.com/NeserCode'>Github</a>",
 				themeInfoDisplay: true,
 			},
+			subSidebar: true,
 		}),
 
 		registerComponentsPlugin({

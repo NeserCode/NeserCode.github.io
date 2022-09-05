@@ -5,4 +5,10 @@ export interface themeData {
 		year?: String
 		themeInfoDisplay?: Boolean
 	}
+	subSidebar?: [
+		{
+			sidebarDepth?: Number
+		},
+		Boolean
+	]
 }

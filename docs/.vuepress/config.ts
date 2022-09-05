@@ -58,6 +58,7 @@ export default defineUserConfig({
 		lastUpdatedText: "更新于",
 		contributorsText: "由",
 		editLink: false,
+		sidebar: false,
 
 		// locales config
 		locales: {

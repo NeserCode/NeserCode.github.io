@@ -15,3 +15,9 @@ import { useSidebarItems } from "../composables";
 
 const sidebarItems = useSidebarItems();
 </script>
+
+<style lang="postcss" scoped>
+.sub-sidebar {
+  @apply text-sm;
+}
+</style>

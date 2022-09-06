@@ -1,23 +1,25 @@
 <template>
   <main class="page">
+    <div class="content-container">
+      <slot name="top" />
+      <!-- <Toc /> -->
+      <div class="theme-default-content">
+        <slot name="content-top" />
+
+        <Content />
+
+        <slot name="content-bottom" />
+      </div>
+
+      <PageMeta />
+
+      <PageNav />
+      <slot name="bottom" />
+      <PageFooter />
+    </div>
     <div class="sidebar-container">
       <sub-sidebar />
     </div>
-    <slot name="top" />
-    <!-- <Toc /> -->
-    <div class="theme-default-content">
-      <slot name="content-top" />
-
-      <Content />
-
-      <slot name="content-bottom" />
-    </div>
-
-    <PageMeta />
-
-    <PageNav />
-    <slot name="bottom" />
-    <PageFooter />
   </main>
 </template>
 
@@ -26,14 +28,13 @@
   @apply relative;
 }
 .sidebar-container {
-  @apply inline-block;
+  @apply absolute inline-block h-full top-0 right-0;
 }
 .sub-sidebar {
-  @apply sticky inline-flex items-center justify-center top-16 right-0
-  text-xs;
+  @apply sticky inline-flex items-center justify-center top-24 right-0;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
   .sidebar-container {
     @apply hidden;
   }

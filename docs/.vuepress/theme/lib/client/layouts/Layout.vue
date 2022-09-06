@@ -94,8 +94,8 @@ const onBeforeLeave = scrollPromise.pending
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-    <slot name="sidebar" v-if="!page.themeDataPlugin.subSidebar">
-      <Sidebar>
+    <slot name="sidebar">
+      <Sidebar class="lg:inline-block xl:hidden">
         <template #top>
           <slot name="sidebar-top" />
         </template>

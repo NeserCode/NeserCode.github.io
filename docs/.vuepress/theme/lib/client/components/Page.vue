@@ -1,9 +1,10 @@
 <template>
   <main class="page">
+    <div class="sidebar-container">
+      <sub-sidebar />
+    </div>
     <slot name="top" />
     <!-- <Toc /> -->
-    <!-- <side-anchor /> -->
-    <sub-sidebar />
     <div class="theme-default-content">
       <slot name="content-top" />
 
@@ -19,6 +20,25 @@
     <PageFooter />
   </main>
 </template>
+
+<style lang="postcss" scoped>
+.page {
+  @apply relative;
+}
+.sidebar-container {
+  @apply inline-block;
+}
+.sub-sidebar {
+  @apply sticky inline-flex items-center justify-center top-16 right-0
+  text-xs;
+}
+
+@media (max-width: 1050px) {
+  .sidebar-container {
+    @apply hidden;
+  }
+}
+</style>
 
 <script setup>
 import PageMeta from "./PageMeta.vue";

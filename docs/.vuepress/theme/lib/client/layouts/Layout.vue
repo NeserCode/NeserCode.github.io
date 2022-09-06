@@ -50,7 +50,7 @@ const onTouchEnd = (e): void => {
 const containerClass = computed(() => [
   {
     'no-navbar': !shouldShowNavbar.value,
-    'no-sidebar': !sidebarItems.value.length,
+    'no-sidebar': page.value.themeDataPlugin.subSidebar ?? !sidebarItems.value.length,
     'sidebar-open': isSidebarOpen.value,
   },
   frontmatter.value.pageClass,
@@ -94,7 +94,7 @@ const onBeforeLeave = scrollPromise.pending
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-    <slot name="sidebar">
+    <slot name="sidebar" v-if="!page.themeDataPlugin.subSidebar">
       <Sidebar>
         <template #top>
           <slot name="sidebar-top" />

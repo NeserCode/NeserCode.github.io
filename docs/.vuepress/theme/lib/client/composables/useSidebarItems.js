@@ -30,13 +30,14 @@ export const setupSidebarItems = () => {
  */
 export const resolveSidebarItems = (frontmatter, themeLocale) => {
     // get sidebar config from frontmatter > theme data
-    const sidebarConfig = frontmatter.sidebar ?? themeLocale.sidebar ?? 'auto';
+    const pageData = usePageData()
+    const sidebarConfig = frontmatter.subsidebar ?? pageData.value.themeDataPlugin.subSidebar ?? frontmatter.sidebar ?? themeLocale.sidebar ?? 'auto';
     const sidebarDepth = frontmatter.sidebarDepth ?? themeLocale.sidebarDepth ?? 2;
     // resolve sidebar items according to the config
     if (frontmatter.home || sidebarConfig === false) {
         return [];
     }
-    if (sidebarConfig === 'auto') {
+    if (sidebarConfig === 'auto' || sidebarConfig === true) {
         return resolveAutoSidebarItems(sidebarDepth);
     }
     if (isArray(sidebarConfig)) {

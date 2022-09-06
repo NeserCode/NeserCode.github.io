@@ -3,7 +3,7 @@
     <slot name="top" />
     <!-- <Toc /> -->
     <!-- <side-anchor /> -->
-    <sidebar-items />
+    <sub-sidebar />
     <div class="theme-default-content">
       <slot name="content-top" />
 
@@ -25,6 +25,6 @@ import PageMeta from "./PageMeta.vue";
 import PageNav from "./PageNav.vue";
 import PageFooter from "./PageFooter.vue";
 // import SideAnchor from "./SideAnchor.vue";
-import SidebarItems from "./SidebarItems.vue";
+import SubSidebar from "./SubSidebar.vue";
 </script>
 

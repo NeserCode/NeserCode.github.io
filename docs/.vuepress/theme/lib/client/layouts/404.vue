@@ -51,6 +51,7 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
   40% {
     clip-path: inset(80% 0 0 0);
     transform: translate(10px, 5px);
+    color: rgba(11, 11, 11, 0.3);
   }
   43% {
     clip-path: inset(50% 0 30% 0);
@@ -63,6 +64,7 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
   55% {
     clip-path: inset(1% 0 80% 0);
     transform: translate(2px, -1px);
+    color: rgba(11, 111, 11, 0.3);
   }
   60% {
     clip-path: inset(40% 0 46% 0);
@@ -75,6 +77,7 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
   70% {
     clip-path: inset(20% 0 72% 0);
     transform: translate(-8px, -8px);
+    color: rgba(111, 11, 11, 0.3);
   }
   85% {
     clip-path: inset(87% 0 10% 0);
@@ -83,6 +86,7 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
   90% {
     clip-path: inset(70% 0 12% 0);
     transform: translate(5px, -5px);
+    color: rgba(1, 1, 1, 1);
   }
   95% {
     clip-path: inset(50% 0 38% 0);

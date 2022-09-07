@@ -131,6 +131,6 @@ const contributors = useContributors()
   @apply mt-0;
 }
 .contributors {
-  @apply inline-flex items-center px-1.5;
+  @apply inline-flex items-center px-1.5 text-base;
 }
 </style>

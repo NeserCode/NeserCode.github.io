@@ -7,13 +7,11 @@
 
 <script setup>
 import HomeArticle from "./HomeArticle.vue";
-import { usePagesData, usePageData } from "@vuepress/client";
-import { useRoute, useRouter } from "vue-router";
+import { acticles } from "../../../../.temp/articles";
 
-const $router = useRouter();
-const $route = useRoute();
-const pages = usePagesData();
-const page = usePageData();
+import { onMounted } from "vue";
 
-console.log($route, $router, pages.value, page.value);
+onMounted(() => {
+  console.log(acticles);
+});
 </script>

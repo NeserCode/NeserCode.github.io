@@ -1,6 +1,10 @@
 ---
 date: 2022-08-20
 home: false
+tag:
+  - markdown
+  - 语法
+  - default
 permalinkPattern: guide/:slug.html
 ---
 

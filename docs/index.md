@@ -1,5 +1,8 @@
 ---
 home: true
+tag:
+  - vuepress
+  - default
 permalinkPattern: /
 ---
 

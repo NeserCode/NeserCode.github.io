@@ -17,7 +17,7 @@
       <slot name="bottom" />
       <PageFooter />
     </div>
-    <div class="sidebar-container">
+    <div class="sidebar-container" ref="sidebarContainer">
       <sub-sidebar />
     </div>
   </main>
@@ -28,7 +28,7 @@
   @apply relative;
 }
 .sidebar-container {
-  @apply absolute inline-block h-full top-0 right-0;
+  @apply absolute inline-block h-full top-0 right-0 pt-40;
 }
 .sub-sidebar {
   @apply sticky inline-flex items-center justify-center top-24 right-0;
@@ -47,5 +47,34 @@ import PageNav from "./PageNav.vue";
 import PageFooter from "./PageFooter.vue";
 // import SideAnchor from "./SideAnchor.vue";
 import SubSidebar from "./SubSidebar.vue";
+
+import { ref, onMounted, onUnmounted } from "vue";
+
+const sidebarContainer = ref(null);
+const mainTextBodyWidth = 660;
+const sideOffset = 60;
+
+const resizeWatcher = new ResizeObserver((element) => {
+  let containerWidth = Math.floor(
+    Number(
+      window.getComputedStyle(sidebarContainer.value).width.replace("px", "")
+    )
+  );
+  let screenWidth = element[0].contentRect.width;
+
+  let computedRightMargin =
+    (screenWidth - mainTextBodyWidth) / 2 -
+    sideOffset -
+    (containerWidth === NaN ? 0 : containerWidth);
+
+  sidebarContainer.value.style.right = `${computedRightMargin}px`;
+});
+
+onMounted(() => {
+  resizeWatcher.observe(document.body);
+});
+onUnmounted(() => {
+  resizeWatcher.disconnect();
+});
 </script>
 

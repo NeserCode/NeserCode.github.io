@@ -18,6 +18,14 @@ const sidebarItems = useSidebarItems();
 
 <style lang="postcss" scoped>
 .sub-sidebar {
-  @apply text-sm;
+  @apply w-52 text-sm transition-all rounded py-2 border
+  bg-gray-100 border-gray-300 dark:bg-gray-900 dark:border-gray-700 bg-opacity-80 dark:bg-opacity-30 backdrop-blur;
+}
+</style>
+
+<style lang="postcss">
+.sidebar-item-children .sidebar-item.active::after {
+  content: "👀";
+  @apply inline-flex justify-center items-center transform;
 }
 </style>

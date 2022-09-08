@@ -51,8 +51,14 @@ function getComputedExcerpt(item) {
   // 删去标题
   if (stringfiedExcerpt.indexOf(item.title) === 0)
     stringfiedExcerpt = stringfiedExcerpt.replace(`${item.title}\n`, "");
+
+  // 空摘要处理
+  if (stringfiedExcerpt === "" || stringfiedExcerpt === undefined)
+    stringfiedExcerpt = "点击文章标题查看更多内容";
+
   // 摘要省略号处理
   stringfiedExcerpt += "......";
+
   return stringfiedExcerpt;
 }
 </script>

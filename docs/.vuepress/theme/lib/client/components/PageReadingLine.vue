@@ -4,12 +4,10 @@
 
 <script setup>
 import { usePageData } from "@vuepress/client";
-import { onMounted } from "vue";
+import { computed } from "vue";
 
 const page = usePageData();
 const { readingLine } = page.value.themeDataPlugin;
 
-onMounted(() => {
-  console.log(readingLine, page.value);
-});
+console.log(readingLine);
 </script>

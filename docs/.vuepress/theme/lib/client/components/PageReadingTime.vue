@@ -1,7 +1,7 @@
 <template>
   <div class="neser-theme-reading-time">
     <span class="main-body">
-      📖 阅读这篇文章大概需要 {{ minutes }} 分钟 | 词数约 {{ words }} 词
+      📖 阅读这篇文章大概需要 {{ minutes }} 分钟 | 约 {{ words }} 词
     </span>
   </div>
 </template>

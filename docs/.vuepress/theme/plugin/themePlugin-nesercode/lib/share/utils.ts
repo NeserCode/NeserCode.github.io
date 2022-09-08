@@ -6,6 +6,11 @@ export function generateThemeOptions(
 ): Object {
 	if (options === null) return defaultThemeOptions
 
-	const { footer, subSidebar } = options
-	return { footer, subSidebar }
+	const { footer, subSidebar, readingTime, readingLine } = options
+	return {
+		footer: footer ?? defaultThemeOptions.footer,
+		subSidebar: subSidebar ?? defaultThemeOptions.subSidebar,
+		readingTime: readingTime ?? defaultThemeOptions.readingTime,
+		readingLine: readingLine ?? defaultThemeOptions.readingLine,
+	}
 }

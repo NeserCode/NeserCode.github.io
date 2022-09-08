@@ -9,6 +9,8 @@ export interface useThemePluginOptions {
 		themeInfoDisplay?: Boolean
 	}
 	subSidebar?: { sidebarDepth?: Number } | Boolean
+	readingTime?: Boolean
+	readingLine?: String | Boolean
 }
 
 export const useThemePlugin =

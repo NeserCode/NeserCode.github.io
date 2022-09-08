@@ -11,4 +11,6 @@ export interface themeData {
 		},
 		Boolean
 	]
+	readingTime?: Boolean
+	readingLine?: String | Boolean
 }

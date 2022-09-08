@@ -20,6 +20,7 @@
       <page-reading-time />
       <sub-sidebar />
     </div>
+    <page-reading-line />
   </main>
 </template>
 
@@ -46,7 +47,7 @@ import PageMeta from "./PageMeta.vue";
 import PageNav from "./PageNav.vue";
 import PageFooter from "./PageFooter.vue";
 import PageReadingTime from "./PageReadingTime.vue";
-// import SideAnchor from "./SideAnchor.vue";
+import PageReadingLine from "./PageReadingLine.vue";
 import SubSidebar from "./SubSidebar.vue";
 
 import { ref, onMounted, onUnmounted } from "vue";

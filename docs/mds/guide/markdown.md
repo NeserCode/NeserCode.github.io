@@ -12,6 +12,8 @@ permalinkPattern: guide/:slug.html
 
 在阅读本章节之前，请确保你已经对 Markdown 有所了解。如果你还不了解 Markdown ，请先学习一些 [Markdown 教程](https://commonmark.org/help/)。
 
+<!-- more -->
+
 ## 语法扩展
 
 VuePress 会使用 [markdown-it](https://github.com/markdown-it/markdown-it) 来解析 Markdown 内容，因此可以借助于 markdown-it 插件来实现 [语法扩展](https://github.com/markdown-it/markdown-it#syntax-extensions) 。

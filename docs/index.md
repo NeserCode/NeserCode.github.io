@@ -3,7 +3,7 @@ home: true
 tag:
   - vuepress
   - default
+  - NeserCode
+  - theme
 permalinkPattern: /
 ---
-
-# 123

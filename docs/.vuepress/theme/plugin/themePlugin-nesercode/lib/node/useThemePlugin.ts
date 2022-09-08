@@ -21,7 +21,7 @@ export const useThemePlugin =
 				const tagMap = new Map()
 				// 依据内容时间进行排序，也可以在这一步过滤掉不符的内容
 				const articleSort = (a, b) =>
-					a.frontmatter.date > b.frontmatter.date ? 1 : -1
+					a.frontmatter.date > b.frontmatter.date ? -1 : 1
 				const articles = app.pages.sort((a, b) => articleSort(a, b))
 				articles.forEach((item, index) => {
 					// 处理上一页下一页，在主题模板中可以读取到这个数据

@@ -18,7 +18,7 @@ const sidebarItems = useSidebarItems();
 
 <style lang="postcss" scoped>
 .sub-sidebar {
-  @apply w-52 text-sm transition-all rounded py-2 border
+  @apply w-56 text-sm transition-all rounded py-2 border
   bg-gray-100 border-gray-300 dark:bg-gray-900 dark:border-gray-700 bg-opacity-80 dark:bg-opacity-30 backdrop-blur;
 }
 </style>

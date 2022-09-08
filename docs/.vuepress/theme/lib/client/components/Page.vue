@@ -5,7 +5,6 @@
       <!-- <Toc /> -->
       <div class="theme-default-content">
         <slot name="content-top" />
-
         <Content />
 
         <slot name="content-bottom" />
@@ -18,6 +17,7 @@
       <PageFooter />
     </div>
     <div class="sidebar-container" ref="sidebarContainer">
+      <page-reading-time />
       <sub-sidebar />
     </div>
   </main>
@@ -28,10 +28,10 @@
   @apply relative;
 }
 .sidebar-container {
-  @apply absolute inline-block h-full top-0 right-0 pt-40;
+  @apply absolute inline-flex flex-col h-full top-0 right-0 pt-40;
 }
 .sub-sidebar {
-  @apply sticky inline-flex items-center top-24 right-0;
+  @apply sticky inline-flex items-center pr-4 top-24 right-0;
 }
 
 @media (max-width: 1150px) {
@@ -45,6 +45,7 @@
 import PageMeta from "./PageMeta.vue";
 import PageNav from "./PageNav.vue";
 import PageFooter from "./PageFooter.vue";
+import PageReadingTime from "./PageReadingTime.vue";
 // import SideAnchor from "./SideAnchor.vue";
 import SubSidebar from "./SubSidebar.vue";
 

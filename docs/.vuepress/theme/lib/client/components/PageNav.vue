@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import AutoLink from '@theme/AutoLink.vue'
 import { usePageData } from '@vuepress/client'
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 
 const page = usePageData()
 
 const prevNavLink = computed(() => page.value.prev)
 const nextNavLink = computed(() => page.value.next)
-
-onMounted((): void => {
-  console.log(prevNavLink, nextNavLink);
-})
 </script>
 
 <template>

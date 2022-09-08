@@ -6,6 +6,8 @@ date: 2022-09-08
 
 插件 API 是由 [@vuepress/core](https://www.npmjs.com/package/@vuepress/core) 包支持的。你可以查看 [Node API](./node-api.md) 来了解如何使用插件 Hooks 中的 VuePress App 实例。
 
+<!-- more -->
+
 ## 概览
 
 插件需要在初始化之前使用。基础配置项会在使用插件时立即被处理：

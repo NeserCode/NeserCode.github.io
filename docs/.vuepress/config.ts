@@ -104,6 +104,7 @@ export default defineUserConfig({
 				themeInfoDisplay: true,
 			},
 			subSidebar: true,
+			readingLine: true,
 		}),
 
 		registerComponentsPlugin({

@@ -6,12 +6,13 @@
 
 <script setup>
 import { usePageData } from "@vuepress/client";
-import { onMounted, onUnmounted, watch, ref } from "vue";
+import { onMounted, onUnmounted, watch, ref, computed } from "vue";
 
 const page = usePageData();
 const { readingLine } = page.value.themeDataPlugin;
 const html = document.documentElement;
-let computedScrollRate = ref(0);
+const computedScrollRate = ref(0);
+const setTimer = ref(0);
 
 function toggleListenScroll(bool) {
   if (bool)
@@ -44,6 +45,16 @@ watch(computedScrollRate, () => {
 });
 
 // 滚动显示进度功能
+watch(computedScrollRate, () => {
+  let lineBody = document.querySelector(".neser-theme-reading-line");
+
+  if (lineBody.classList.contains("active")) clearTimeout(setTimer.value);
+  else lineBody.classList.add("active");
+
+  setTimer.value = setTimeout(() => {
+    lineBody.classList.remove("active");
+  }, 750);
+});
 
 onMounted(() => {
   toggleListenScroll(true);
@@ -62,6 +73,16 @@ onUnmounted(() => {
   max-width: var(--max-width);
   @apply fixed top-14 left-0 h-0.5 
   bg-green-300
-  translate-y-0.5 transform z-20;
+  translate-y-0.5 transform z-10;
+}
+
+.neser-theme-reading-line .inner {
+  @apply inline-flex items-center justify-center px-2 py-0.5 border rounded-br
+  text-base font-semibold select-none
+  bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-700 bg-opacity-80 dark:bg-opacity-30 backdrop-blur
+  opacity-0 transition-all duration-500 transform translate-y-0.5;
+}
+.neser-theme-reading-line.active .inner {
+  @apply opacity-100;
 }
 </style>

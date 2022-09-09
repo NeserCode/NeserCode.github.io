@@ -18,8 +18,27 @@ function toggleListenScroll(bool) {
     window.addEventListener("scroll", () => {
       computedScrollRate.value =
         html.scrollTop / (html.scrollHeight - html.clientHeight).toFixed(3);
+      initMaxWidth();
     });
   else window.addEventListener("scroll", () => {});
+}
+
+function getComputedMaxWidth() {
+  let html = document.documentElement,
+    body = document.body;
+  return (
+    1 -
+    (window.innerWidth - (html.clientWidth || body.clientWidth)) /
+      window.innerWidth
+  );
+}
+
+function initMaxWidth() {
+  let lineBody = document.querySelector(".neser-theme-reading-line");
+  lineBody.style.setProperty(
+    "--max-width",
+    `${(getComputedMaxWidth() * 100).toFixed(3)}%`
+  );
 }
 
 watch(computedScrollRate, () => {
@@ -42,7 +61,10 @@ onUnmounted(() => {
 <style lang="postcss" scoped>
 .neser-theme-reading-line {
   --reading-process: 0%;
+  --max-width: 0%;
+
   width: var(--reading-process);
+  max-width: var(--max-width);
   @apply fixed top-14 left-0 h-0.5 
   bg-green-300
   translate-y-0.5 transform z-30;
@@ -51,6 +73,6 @@ onUnmounted(() => {
   content: "🚀";
   @apply relative inline-flex items-center justify-center left-full top-full
   bg-clip-text bg-white 
-  transform -translate-x-1/2 -translate-y-1/2 z-30;
+  transform -translate-x-1/4 -translate-y-1/2 z-30;
 }
 </style>

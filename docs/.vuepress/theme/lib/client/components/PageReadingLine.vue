@@ -23,7 +23,12 @@ function toggleListenScroll(bool) {
 }
 
 watch(computedScrollRate, () => {
-  console.log(computedScrollRate.value);
+  let lineBody = document.querySelector(".neser-theme-reading-line");
+
+  lineBody.style.setProperty(
+    "--reading-process",
+    `${(computedScrollRate.value * 100).toFixed(2)}%`
+  );
 });
 
 onMounted(() => {
@@ -36,6 +41,16 @@ onUnmounted(() => {
 
 <style lang="postcss" scoped>
 .neser-theme-reading-line {
-  @apply absolute top-14 left-0 w-full h-1 bg-black;
+  --reading-process: 0%;
+  width: var(--reading-process);
+  @apply fixed top-14 left-0 h-0.5 
+  bg-green-300
+  translate-y-0.5 transform z-30;
+}
+.neser-theme-reading-line::after {
+  content: "🚀";
+  @apply relative inline-flex items-center justify-center left-full top-full
+  bg-clip-text bg-white 
+  transform -translate-x-1/2 -translate-y-1/2 z-30;
 }
 </style>

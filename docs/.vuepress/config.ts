@@ -10,7 +10,6 @@ import { searchPlugin } from "@vuepress/plugin-search"
 import { activeHeaderLinksPlugin } from "@vuepress/plugin-active-header-links"
 import { tocPlugin } from "@vuepress/plugin-toc"
 import { gitPlugin } from "@vuepress/plugin-git"
-import { nprogressPlugin } from "@vuepress/plugin-nprogress"
 
 import { copyCodePlugin } from "vuepress-plugin-copy-code2"
 import { readingTimePlugin } from "vuepress-plugin-reading-time2"
@@ -119,7 +118,6 @@ export default defineUserConfig({
 		}),
 		tocPlugin(),
 		gitPlugin(),
-		nprogressPlugin(),
 
 		copyCodePlugin({
 			showInMobile: true,

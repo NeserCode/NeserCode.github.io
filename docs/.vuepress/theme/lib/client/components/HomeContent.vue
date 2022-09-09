@@ -8,3 +8,4 @@
 <script setup>
 import HomeArticle from "./HomeArticle.vue";
 </script>
+

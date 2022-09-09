@@ -72,7 +72,7 @@ onUnmounted(() => {
   width: var(--reading-process);
   max-width: var(--max-width);
   @apply fixed top-14 left-0 h-0.5 
-  bg-green-300
+  bg-green-300 dark:bg-green-600
   translate-y-0.5 transform z-10;
 }
 

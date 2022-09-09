@@ -1,5 +1,5 @@
 <template>
-  <div class="neser-theme-reading-time">
+  <div class="neser-theme-reading-time" v-if="readingTime">
     <span class="main-body">
       📖 阅读这篇文章大概需要 {{ minutes }} 分钟 | 约 {{ words }} 词
     </span>
@@ -9,6 +9,7 @@
 <script setup>
 import { usePageData } from "@vuepress/client";
 const page = usePageData();
+const { readingTime } = page.value.themeDataPlugin;
 const { words, minutes } = page.value.readingTime;
 </script>
 

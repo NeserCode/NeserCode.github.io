@@ -104,6 +104,7 @@ export default defineUserConfig({
 			},
 			subSidebar: true,
 			readingLine: true,
+			readingTime: true,
 		}),
 
 		registerComponentsPlugin({

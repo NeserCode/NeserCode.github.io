@@ -5,6 +5,7 @@ tag:
   - markdown
   - 语法
   - default
+  - 一个超级无敌长到每一个开发人员都想不到的非常长的tag
 permalinkPattern: guide/:slug.html
 ---
 

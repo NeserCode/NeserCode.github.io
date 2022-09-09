@@ -13,9 +13,13 @@
       <div class="neser-theme-article-detail">
         <span class="submitDate" v-if="item.date">{{ item.date }}</span>
         <div class="tags" v-if="item.frontmatter.tag">
-          <span class="tag" v-for="tag in item.frontmatter.tag" :key="tag">{{
-            tag
-          }}</span>
+          <span
+            class="tag"
+            v-for="tag in item.frontmatter.tag"
+            :title="tag"
+            :key="tag"
+            >{{ tag }}</span
+          >
         </div>
       </div>
       <div class="neser-theme-article-excerpt">
@@ -65,7 +69,7 @@ function getComputedExcerpt(item) {
 
 <style lang="postcss" scoped>
 .neser-theme-article-list {
-  @apply inline-flex  flex-col justify-center w-full p-16;
+  @apply inline-flex  flex-col justify-center w-full py-16 lg:px-16 sm:px-0;
 }
 .neser-theme-article-body {
   @apply inline-flex flex-col justify-center w-full px-6 py-4 my-4 rounded border
@@ -78,5 +82,19 @@ function getComputedExcerpt(item) {
 }
 .neser-theme-article-title .title-wrapper {
   @apply no-underline;
+}
+
+.neser-theme-article-detail {
+  @apply inline-flex flex-col justify-center pb-1;
+}
+.neser-theme-article-detail .tags {
+  @apply inline-flex items-center py-1 flex-wrap;
+}
+.tags .tag {
+  @apply inline-block py-1 px-2 m-1 border rounded text-ellipsis overflow-hidden whitespace-nowrap
+  font-thin
+  border-gray-400 dark:border-gray-700 bg-gray-50 text-gray-600 dark:bg-gray-900 dark:text-gray-300;
+  max-width: 15ch;
+  font-family: Consolas;
 }
 </style>

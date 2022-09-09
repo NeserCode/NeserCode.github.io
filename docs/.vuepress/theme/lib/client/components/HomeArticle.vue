@@ -92,7 +92,7 @@ function getComputedExcerpt(item) {
 }
 .tags .tag {
   @apply inline-block py-1 px-2 m-1 border rounded text-ellipsis overflow-hidden whitespace-nowrap
-  font-thin
+  font-thin transition-all duration-500
   border-gray-400 dark:border-gray-700 bg-gray-50 text-gray-600 dark:bg-gray-900 dark:text-gray-300;
   max-width: 15ch;
   font-family: Consolas;

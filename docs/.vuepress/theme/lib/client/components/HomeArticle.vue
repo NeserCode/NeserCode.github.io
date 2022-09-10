@@ -6,7 +6,7 @@
       :key="item.key"
     >
       <div class="neser-theme-article-title">
-        <router-link :to="item.path" class="title-wrapper"
+        <router-link :to="item.path" class="title-wrapper" title="阅读文章"
           ><span class="innerTitle">{{ item.title }}</span>
         </router-link>
       </div>
@@ -31,7 +31,6 @@
 
 <script setup>
 import { acticles as rawActicles } from "../../../../.temp/articles";
-
 import { onMounted, computed } from "vue";
 
 function useActicles(items = []) {

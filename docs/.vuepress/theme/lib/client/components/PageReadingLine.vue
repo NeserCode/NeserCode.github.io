@@ -6,7 +6,8 @@
 
 <script setup>
 import { usePageData } from "@vuepress/client";
-import { onMounted, onUnmounted, watch, ref, computed } from "vue";
+import { onMounted, watch, ref } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 
 const page = usePageData();
 const { readingLine } = page.value.themeDataPlugin;
@@ -14,14 +15,15 @@ const html = document.documentElement;
 const computedScrollRate = ref(0);
 const setTimer = ref(0);
 
+const infferListener = () => {
+  computedScrollRate.value =
+    html.scrollTop / (html.scrollHeight - html.clientHeight).toFixed(3);
+  initMaxWidth();
+};
+
 function toggleListenScroll(bool) {
-  if (bool)
-    window.addEventListener("scroll", () => {
-      computedScrollRate.value =
-        html.scrollTop / (html.scrollHeight - html.clientHeight).toFixed(3);
-      initMaxWidth();
-    });
-  else window.addEventListener("scroll", () => {});
+  if (bool) window.addEventListener("scroll", infferListener);
+  else window.removeEventListener("scroll", infferListener);
 }
 
 function getComputedMaxWidth() {
@@ -59,7 +61,7 @@ watch(computedScrollRate, () => {
 onMounted(() => {
   toggleListenScroll(true);
 });
-onUnmounted(() => {
+onBeforeRouteLeave(() => {
   toggleListenScroll(false);
 });
 </script>

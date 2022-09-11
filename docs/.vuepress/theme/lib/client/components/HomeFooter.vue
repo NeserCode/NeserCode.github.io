@@ -33,7 +33,7 @@ const { year, copyright, themeInfoDisplay } = pageData.value.themeDataPlugin.foo
 }
 
 .neser-footer-home {
-  @apply inline-flex w-full h-full justify-center items-center mt-8;
+  @apply inline-flex w-full h-full justify-center items-center my-8;
 }
 
 .neser-footer-body {

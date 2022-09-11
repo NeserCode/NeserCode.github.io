@@ -15,7 +15,7 @@ const hitokoto_fromWho = ref("");
 const computedTitle = computed(
   () => `摘自: ${hitokoto_from.value}
 作者: ${hitokoto_fromWho.value ?? "无名"}
-Tip: 本功能基于 Hitokoto · 一言`
+本功能基于 Hitokoto · 一言`
 );
 
 onMounted(() => {
@@ -25,7 +25,6 @@ onMounted(() => {
       hitokoto.value = data.hitokoto;
       hitokoto_from.value = data.from;
       hitokoto_fromWho.value = data.from_who;
-      console.log(data);
     })
     .catch(console.error);
 });

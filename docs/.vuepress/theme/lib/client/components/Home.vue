@@ -5,7 +5,8 @@ import HomeHitokoto from "./HomeHitokoto.vue";
 
 import { ref, onMounted, onUnmounted } from "vue";
 import { debounce } from "ts-debounce";
-const minScroll = ref(200);
+const minScroll = ref(120);
+const scrollDiff = ref(0);
 
 function toggleListener(bool) {
   window.addEventListener(
@@ -17,11 +18,20 @@ function toggleListener(bool) {
           let computedTop = document.querySelector(
             ".neser-theme-article-list"
           ).offsetTop;
-          if (scrolled > minScroll.value && scrolled <= computedTop)
+          scrollDiff.value -= window.scrollY;
+          console.log(scrolled, computedTop, scrollDiff.value);
+          if (
+            scrolled > minScroll.value &&
+            scrolled <= computedTop &&
+            scrollDiff.value < 0
+          ) {
             window.scrollTo({
               top: computedTop,
               behavior: "smooth",
             });
+            console.log("?");
+          }
+          scrollDiff.value = window.scrollY;
         }, 300)
       : () => {}
   );

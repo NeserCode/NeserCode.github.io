@@ -18,14 +18,18 @@ const sidebarItems = useSidebarItems();
 
 <style lang="postcss" scoped>
 .sub-sidebar {
-  @apply w-56 text-sm transition-all rounded py-2 border
-  bg-gray-100 border-gray-300 dark:bg-gray-900 dark:border-gray-700 bg-opacity-80 dark:bg-opacity-30 backdrop-blur;
+  @apply sticky inline-flex pr-4 w-56 text-sm transition-all rounded py-2 border
+  bg-gray-100 border-gray-300 dark:bg-gray-900 dark:border-gray-700 bg-opacity-80 dark:bg-opacity-30 backdrop-blur
+  overflow-scroll overflow-x-hidden;
+  max-height: calc(100vh - 4rem - 12rem);
 }
 </style>
 
 <style lang="postcss">
-.sidebar-item-children .sidebar-item.active::after {
+.sidebar-item-children
+  .sidebar-item-children
+  .sidebar-item:not(.sidebar-heading).active::after {
   content: "👀";
-  @apply inline-flex justify-center items-center transform;
+  @apply inline-flex items-center transform;
 }
 </style>

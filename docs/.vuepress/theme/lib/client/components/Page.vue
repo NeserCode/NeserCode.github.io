@@ -32,7 +32,7 @@
   @apply absolute inline-flex flex-col h-full top-0 right-0 pt-40;
 }
 .sub-sidebar {
-  @apply sticky inline-flex items-center pr-4 top-24 right-0;
+  @apply top-24 right-0;
 }
 
 @media (max-width: 1150px) {

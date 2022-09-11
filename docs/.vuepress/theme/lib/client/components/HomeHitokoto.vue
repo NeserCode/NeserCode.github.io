@@ -20,7 +20,7 @@ Tip: 本功能基于 Hitokoto · 一言`
 
 onMounted(() => {
   $axios
-    .get("https://v1.hitokoto.cn?c=i&c=d")
+    .get("https://v1.hitokoto.cn?c=i")
     .then(({ data }) => {
       hitokoto.value = data.hitokoto;
       hitokoto_from.value = data.from;
@@ -33,7 +33,7 @@ onMounted(() => {
 
 <style lang="postcss" scoped>
 .neser-theme-hitokoto {
-  @apply inline-flex justify-center items-center w-full py-12 mt-16;
+  @apply inline-flex justify-center items-center w-full py-12 my-64;
 }
 
 .neser-theme-hitokoto .innerText {

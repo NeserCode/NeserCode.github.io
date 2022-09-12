@@ -65,9 +65,9 @@ export default defineUserConfig({
 				// navbar config
 				navbar: [
 					{
-						text: "Markdown",
-						link: "/mds/guide/markdown.md",
-						activeMatch: "/guide/markdown.html",
+						text: "关于",
+						link: "/mds/about/aboutme.md",
+						activeMatch: "/about",
 					},
 				],
 				backToHome: "回到首页",

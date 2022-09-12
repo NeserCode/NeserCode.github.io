@@ -3,6 +3,7 @@ import Home from '@theme/Home.vue'
 import Navbar from '@theme/Navbar.vue'
 import Page from '@theme/Page.vue'
 import Sidebar from '@theme/Sidebar.vue'
+import About from '../components/About.vue'
 
 import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
@@ -115,7 +116,9 @@ const onBeforeLeave = scrollPromise.pending
         @before-enter="onBeforeEnter"
         @before-leave="onBeforeLeave"
       >
-        <Page :key="page.path">
+        <About v-if="frontmatter.about" />
+
+        <Page :key="page.path" v-else>
           <template #top>
             <slot name="page-top" />
           </template>

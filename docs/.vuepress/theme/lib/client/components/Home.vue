@@ -38,7 +38,6 @@ onMounted(() => {
 });
 onBeforeRouteLeave(() => {
   toggleListener(false);
-  console.log("watch");
 });
 </script>
 

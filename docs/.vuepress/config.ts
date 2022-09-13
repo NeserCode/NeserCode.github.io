@@ -102,6 +102,12 @@ export default defineUserConfig({
 					"NeserCode - <a target='_blank' href='https://github.com/NeserCode'>Github</a>",
 				themeInfoDisplay: true,
 			},
+			adminInfo: {
+				display: true,
+				avatar: "https://q1.qlogo.cn/g?b=qq&nk=510648363&s=640",
+				username: "NeserCode",
+				moto: "Code More",
+			},
 			subSidebar: true,
 			readingLine: true,
 			readingTime: true,

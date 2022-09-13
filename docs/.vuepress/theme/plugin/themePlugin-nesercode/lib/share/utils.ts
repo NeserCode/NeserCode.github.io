@@ -6,9 +6,10 @@ export function generateThemeOptions(
 ): Object {
 	if (options === null) return defaultThemeOptions
 
-	const { footer, subSidebar, readingTime, readingLine } = options
+	const { adminInfo, footer, subSidebar, readingTime, readingLine } = options
 	return {
 		footer: footer ?? defaultThemeOptions.footer,
+		adminInfo: adminInfo ?? defaultThemeOptions.adminInfo,
 		subSidebar: subSidebar ?? defaultThemeOptions.subSidebar,
 		readingTime: readingTime ?? defaultThemeOptions.readingTime,
 		readingLine: readingLine ?? defaultThemeOptions.readingLine,

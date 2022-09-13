@@ -21,7 +21,7 @@ const { year, copyright, themeInfoDisplay } = pageData.value.themeDataPlugin.foo
         <span class="copyright" v-html="copyright"></span>
       </span>
       <span class="theme-info" v-if="themeInfoDisplay">
-        Theme By NeserCode
+        Theme By NeserCode | Power By VuePress v2
       </span>
     </div>
   </footer>

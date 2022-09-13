@@ -5,6 +5,12 @@ export interface themeData {
 		year?: String
 		themeInfoDisplay?: Boolean
 	}
+	adminInfo?: {
+		avatar?: String | Boolean
+		username?: String | Boolean
+		moto?: String | Boolean
+		display: Boolean
+	}
 	subSidebar?: [
 		{
 			sidebarDepth?: Number

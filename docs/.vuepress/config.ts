@@ -106,7 +106,7 @@ export default defineUserConfig({
 				display: true,
 				avatar: "https://q1.qlogo.cn/g?b=qq&nk=510648363&s=640",
 				username: "NeserCode",
-				moto: "Code More",
+				moto: "知识是无穷无尽的，这应当是一个公知。",
 			},
 			subSidebar: true,
 			readingLine: true,

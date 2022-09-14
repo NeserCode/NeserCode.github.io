@@ -3,80 +3,19 @@ about: true
 permalink: /about
 ---
 
-# Aboutme
+# 关于
 
-Hi, I'm NeserCode.
+你好！欢迎来到我的博客。这个博客是基于 [VuePress v2](https://v2.vuepress.vuejs.org/zh/) 来完成的。为了使其更加美观（个人意向上），还使用了 [Tailwind Css](https://www.tailwindcss.cn/) 对部分样式进行重构和设计。对于上述提到的技术暂且搁置，现在正是来了解我的好时机！
 
-## Aboutme
+## 个人简介
 
-Hi, I'm NeserCode.
+我，你可以称呼我为 **NeserCode** 或者 **Neser** (这已经被刻在导航栏上了)，是一个准程序员。目前在倒腾的技术大部分就是前端了，后端的 Node.js 也有涉猎，但不多。
 
-## Aboutme
+我这个人比较慢热，性格上是，做事情也是。由于是处女座，所以决定要做的事情都会很认真的去做，而且有兴趣的事情更能调动我的情绪。但目前比较头疼的是想做的事情有些多，又不擅长规划，于是就会有事事不通事事不顺的现象出现（已经在改 🤦‍♂️）。
 
-Hi, I'm NeserCode.
+## 联系方式
 
-## Aboutme
+由于是网络页面，这里就不留电话了。留下联系方式仅仅只是为了广交朋友及技术交流，如果没有这方面的意图还请不要添加以下联系方式 :)
 
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.
-
-## Aboutme
-
-Hi, I'm NeserCode.Hi, I'm NeserCode.Hi, I'm NeserCode.Hi, I'm NeserCode.Hi, I'm NeserCode.Hi, I'm NeserCode.Hi, I'm NeserCode.
+- 🐧 [QID] NeserCode
+- 🗨 [VXID] hz_NeserCode_22

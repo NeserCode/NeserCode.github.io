@@ -120,11 +120,11 @@ export default defineUserConfig({
 				mapping: "title",
 				strict: true,
 				reactions: true,
-				metadata: false,
+				metadata: true,
 				position: "top",
 				theme: "light", // preferred_color_scheme
 				lang: "zh-CN",
-				loading: true,
+				loading: false,
 			},
 		}),
 

@@ -106,11 +106,26 @@ export default defineUserConfig({
 				display: true,
 				avatar: "https://q1.qlogo.cn/g?b=qq&nk=510648363&s=640",
 				username: "NeserCode",
-				moto: "知识是无穷无尽的，这应当是一个公知。",
+				moto: "知识是无穷无尽的，这应当是一个公识。",
 			},
 			subSidebar: true,
 			readingLine: true,
 			readingTime: true,
+			giscusOptions: {
+				src: "https://giscus.app/client.js",
+				repo: "NeserCode/NeserCode.github.io",
+				repoId: "R_kgDOHf8WIA",
+				category: "General",
+				categoryId: "DIC_kwDOHf8WIM4CRa-j",
+				mapping: "title",
+				strict: true,
+				reactions: true,
+				metadata: false,
+				position: "top",
+				theme: "light", // preferred_color_scheme
+				lang: "zh-CN",
+				loading: true,
+			},
 		}),
 
 		registerComponentsPlugin({

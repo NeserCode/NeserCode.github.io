@@ -17,5 +17,5 @@ permalink: /about
 
 由于是网络页面，这里就不留电话了。留下联系方式仅仅只是为了广交朋友及技术交流，如果没有这方面的意图还请不要添加以下联系方式 :)
 
-- 🐧 [QID] NeserCode
-- 🗨 [VXID] hz_NeserCode_22
+- QID: NeserCode
+- VXID: hz_NeserCode_22

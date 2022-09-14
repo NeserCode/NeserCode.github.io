@@ -9,7 +9,6 @@
 
 <style lang="postcss" scoped>
 .neser-theme-about-main {
-  @apply inline-flex items-center h-full p-4 px-8 max-w-xl;
-  offset-anchor: 48px;
+  @apply inline-flex items-center h-full text-left pt-10 px-4;
 }
 </style>

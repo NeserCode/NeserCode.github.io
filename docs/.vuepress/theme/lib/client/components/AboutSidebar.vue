@@ -20,7 +20,7 @@ console.log(adminInfo);
 
 <style lang="postcss" scoped>
 .neser-theme-about-sidebar {
-  @apply sm:hidden inline-flex px-4 py-2 items-start;
+  @apply sm:hidden inline-flex px-4 py-4 pr-8 pt-16 items-start;
 }
 
 .details,

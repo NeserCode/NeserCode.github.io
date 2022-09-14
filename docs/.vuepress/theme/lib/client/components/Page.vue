@@ -24,7 +24,7 @@
   </main>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .page {
   @apply relative;
 }

@@ -43,6 +43,18 @@ export interface themeData {
 			| "preferred_color_scheme"
 			| `${string}.css`
 			| `https://${string}`
+		darkTheme?:
+			| "light"
+			| "light_high_contrast"
+			| "light_protanopia"
+			| "dark"
+			| "dark_high_contrast"
+			| "dark_protanopia"
+			| "dark_dimmed"
+			| "transparent_dark"
+			| "preferred_color_scheme"
+			| `${string}.css`
+			| `https://${string}`
 		lang:
 			| "de"
 			| "en"

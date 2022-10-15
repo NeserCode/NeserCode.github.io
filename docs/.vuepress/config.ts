@@ -13,7 +13,11 @@ import { gitPlugin } from "@vuepress/plugin-git"
 
 import { copyCodePlugin } from "vuepress-plugin-copy-code2"
 import { readingTimePlugin } from "vuepress-plugin-reading-time2"
+import { commentPlugin } from "vuepress-plugin-comment2"
 import { useThemePlugin } from "./theme/plugin/themePlugin-nesercode"
+
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
 
 const isProd = process.env.NODE_ENV === "production"
 
@@ -43,7 +47,7 @@ export default defineUserConfig({
 					viteOptions: {
 						css: {
 							postcss: {
-								plugins: [require("tailwindcss"), require("autoprefixer")],
+								plugins: [tailwindcss, autoprefixer],
 							},
 						},
 					},
@@ -58,6 +62,7 @@ export default defineUserConfig({
 		lastUpdatedText: "更新于",
 		contributorsText: "由",
 		editLink: false,
+		sidebarDepth: 2,
 
 		// locales config
 		locales: {
@@ -122,7 +127,8 @@ export default defineUserConfig({
 				reactions: true,
 				metadata: true,
 				position: "top",
-				theme: "light", // preferred_color_scheme
+				theme: "light", // preferred_color_scheme dark_dimmed
+				darkTheme: "dark_dimmed",
 				lang: "zh-CN",
 				loading: false,
 			},

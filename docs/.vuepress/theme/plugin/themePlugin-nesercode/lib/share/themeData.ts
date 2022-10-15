@@ -20,7 +20,6 @@ export interface themeData {
 	readingTime?: Boolean
 	readingLine?: String | Boolean
 	giscusOptions?: {
-		src: string
 		repo: `${string}/${string}`
 		repoId: string
 		category: string

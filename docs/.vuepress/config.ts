@@ -7,13 +7,12 @@ import { registerComponentsPlugin } from "@vuepress/plugin-register-components"
 import { shikiPlugin } from "@vuepress/plugin-shiki"
 import { path } from "@vuepress/utils"
 import { searchPlugin } from "@vuepress/plugin-search"
-import { activeHeaderLinksPlugin } from "@vuepress/plugin-active-header-links"
 import { tocPlugin } from "@vuepress/plugin-toc"
 import { gitPlugin } from "@vuepress/plugin-git"
 
 import { copyCodePlugin } from "vuepress-plugin-copy-code2"
 import { readingTimePlugin } from "vuepress-plugin-reading-time2"
-import { commentPlugin } from "vuepress-plugin-comment2"
+// import { commentPlugin } from "vuepress-plugin-comment2"
 import { useThemePlugin } from "./theme/plugin/themePlugin-nesercode"
 
 import tailwindcss from "tailwindcss"
@@ -117,7 +116,6 @@ export default defineUserConfig({
 			readingLine: true,
 			readingTime: true,
 			giscusOptions: {
-				src: "https://giscus.app/client.js",
 				repo: "NeserCode/NeserCode.github.io",
 				repoId: "R_kgDOHf8WIA",
 				category: "General",
@@ -134,16 +132,28 @@ export default defineUserConfig({
 			},
 		}),
 
+		// commentPlugin({
+		// 	repo: "NeserCode/NeserCode.github.io",
+		// 	repoId: "R_kgDOHf8WIA",
+		// 	category: "General",
+		// 	categoryId: "DIC_kwDOHf8WIM4CRa-j",
+		// 	mapping: "title",
+		// 	strict: true,
+		// 	reactions: true,
+		// 	metadata: true,
+		// 	position: "top",
+		// 	theme: "light", // preferred_color_scheme dark_dimmed
+		// 	darkTheme: "dark_dimmed",
+		// 	lang: "zh-CN",
+		// 	loading: false,
+		// }),
+
 		registerComponentsPlugin({
 			componentsDir: path.resolve(__dirname, "./components"),
 		}),
 		// only enable shiki plugin in production mode
 		isProd ? shikiPlugin({ theme: "dark-plus" }) : [],
 		searchPlugin(),
-		activeHeaderLinksPlugin({
-			delay: 50,
-			offset: 5,
-		}),
 		tocPlugin(),
 		gitPlugin(),
 
